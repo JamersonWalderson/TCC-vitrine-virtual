@@ -12,7 +12,7 @@
     <a href="{{route('product.create')}}" type="button" class="btn btn-primary mt-4 mb-4">Cadastrar novo produto</a>
     <div class="row">
         <div class="col-md-12 mt-4">
-            <table id="example" class="table table-sm table-responsive" style="width:100%;">
+            <table id="example" class="table table-striped table-bordered" style="width:100%;">
                 <thead class="thead-light">
                     <tr>
                         <th>Id</th>
