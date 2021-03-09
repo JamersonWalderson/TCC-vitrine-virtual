@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BannerController;
 
 
 /*
@@ -37,7 +38,7 @@ Route::group(['prefix' => 'admin'], function () {
     /** A rota product.relation ajuda no relacionamento entre categoria e produto */
     Route::get('product/edit/{product}/{category}', [ProductsController::class, 'edit'])->name('product.relation');
     Route::resource('category', CategoryController::class);
-    Route::get('banners', [AdminController::class, 'banners'])->name('admin.banners');
+    Route::resource('banner', BannerController::class);
     Route::resource('contact', ContactController::class);
     Route::resource('user', UserController::class);
 });

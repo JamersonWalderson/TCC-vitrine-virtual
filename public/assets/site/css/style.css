@@ -1,12 +1,34 @@
 body {
     font-family: Biotif,Arial,Helvetica,sans-serif;
-}
 
+}
 a.custom-card {
     color: inherit;
     text-decoration: none;
 
 }
+.banner {
+    max-width: 100%;
+    height:100%;
+    
+
+}
+.img-banner {
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-size: cover !important;   
+    background-position: center !important;
+    justify-content: center;
+
+}
+.card-img {
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-size: cover !important;   
+    background-position: center !important;
+    justify-content: center;
+}
+
 
 @media screen and (max-width: 600px) {
     .card-mobile {

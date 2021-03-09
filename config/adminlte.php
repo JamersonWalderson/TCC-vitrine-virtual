@@ -234,7 +234,6 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        ['header' => 'account_settings'],
         [
             'text'    => 'Estoque   ',
             'icon'    => 'fas fa-fw fa-share',
@@ -258,19 +257,14 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Imagens',
-            'url'  => 'admin/banners',
+            'text' => 'Banner',
+            'url'  => 'admin/banner',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Contato',
             'url'  => 'admin/contact',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
         ],
         
     ],
