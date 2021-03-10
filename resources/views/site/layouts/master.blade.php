@@ -20,19 +20,19 @@
     <title>@yield('title')</title>
 </head>
 <body>
+<!--
   <nav class="navbar navbar-expand-md bg-light navbar-light">
-    <!-- Brand -->
+    Brand
     <a class="navbar-brand" href="#">{{$contacts->name}}</a>
   
-    <!-- Toggler/collapsibe Button -->
+    Toggler/collapsibe Button
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <!-- Navbar links -->
+ Navbar links
     <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
       <ul class="navbar-nav">
-      <!-- <?php print_r($categories); ?> -->
         @foreach($categories as $category)
         <li class="nav-item">
           <a class="nav-link" href="#">{{ $category->name }}</a>
@@ -41,6 +41,7 @@
       </ul>
     </div>
   </nav> 
+-->
   @yield('content')
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

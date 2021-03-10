@@ -24,7 +24,7 @@
                 @foreach($banners as $banner)
                     <tr class="table-">
                         <td>{{ $banner->name }}</td>
-                        <td><img src="/assets/image/banner/uploads/{{$banner->image}}" style="width: 120px; height: 90px;"></td>
+                        <td><img src="/assets/image/banner/uploads/{{ $banner->image }}" style="width: 120px; height: 90px;"></td>
                         <td>
                             <form action="{{ route('banner.destroy', $banner->id) }}" method="POST">
                                 @csrf

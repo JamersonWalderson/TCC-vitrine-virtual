@@ -9,10 +9,11 @@
             <div class="carousel-inner">
             @foreach($banners as $key => $banner)
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                    <img class="d-block w-100" src="/assets/image/banner/uploads/{{$banner->image}}" alt="First slide">
+                    <img class="d-block w-100 img-fluid img-banner" src="/assets/image/banner/uploads/{{$banner->image}}" alt="{{$banner->name}}">
                 </div>
             @endforeach
             </div>
+           
             <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Anterior</span>
@@ -21,6 +22,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Próximo</span>
             </a>
+            
         </div>
     </div>
 </div>
