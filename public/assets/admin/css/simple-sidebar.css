@@ -47,8 +47,9 @@
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
-  .bt-delete {
+  .btn {
     background-color: transparent;
     border-width: 0;
+    padding: 0px;
   }
 }

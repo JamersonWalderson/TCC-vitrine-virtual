@@ -28,7 +28,7 @@
                                 <a href="{{route('category.edit', $category->id)}}"><i class="fas fa-edit text-info mr-2"></i></a>
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="bt-delete" onclick="return confirm('Deseja realmente deletar este registro?')"><i class="fas fa-trash text-danger mr-2"></i></button>
+                                <button type="submit" class="btn" onclick="return confirm('Deseja realmente deletar este registro?')"><i class="fas fa-trash text-danger mr-2"></i></button>
                             </form>
                         </td>
                     </tr>
