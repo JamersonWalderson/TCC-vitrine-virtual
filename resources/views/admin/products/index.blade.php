@@ -15,7 +15,6 @@
             <table id="example" class="table table-striped table-bordered" style="width:100%;">
                 <thead class="thead-light">
                     <tr>
-                        <th>Id</th>
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Preço</th>
@@ -31,7 +30,6 @@
                 <tbody>
                 @foreach($products as $product)
                     <tr class="table-{{ $product->disponibility == 1 ? 'success' : 'danger' }}">
-                        <td>{{$product->id}}</td>
                         <td>{{$product->name}}</td>
                         <td>
                             @foreach ($categories as $category)

@@ -15,7 +15,6 @@
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Nome da categoria</th>
                         <th>Ações</th>
                     </tr>
@@ -23,7 +22,6 @@
                 <tbody>
                 @foreach($categories as $category)
                     <tr>
-                        <td>{{$category->id}}</td>
                         <td>{{$category->name}}</td>
                         <td>
                             <form action="{{ route('category.destroy', $category->id) }}" method="POST">
