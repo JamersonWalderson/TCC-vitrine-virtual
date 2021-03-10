@@ -20,6 +20,7 @@
                   </div>
                   <div class="form-group">
                     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                    <a class="btn btn-danger" href="{{ route('category.index') }}">Cancelar</a>
                     <button name="bt-record" type="submit" class="btn btn-primary">Atualizar</button>
                 </div>
                 </div>

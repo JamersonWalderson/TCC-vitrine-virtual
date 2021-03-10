@@ -28,6 +28,7 @@
                   </div>
                 </div>
                 <div class="form-group">
+                    <a class="btn btn-danger" href="{{ route('contact.index') }}">Cancelar</a>
                     <button name="bt-record" type="submit" class="btn btn-success">Atualizar</button>
                 </div>
             </form>

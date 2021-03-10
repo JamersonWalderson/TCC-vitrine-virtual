@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Banner;
 
 class BannerController extends Controller
 {
@@ -13,7 +14,8 @@ class BannerController extends Controller
      */
     public function index()
     {
-        return view ('admin.banner.index');
+        $banner = Banner::all();
+        return view ('admin.banner.index', ['banners' => $banner]);
     }
 
     /**
@@ -34,7 +36,23 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $banner = new Banner;
+        $banner->name = $request->name;
+
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = md5(time()) . '.' . $extension;
+            $file->move('assets/image/banner/uploads/', $filename);
+            $banner->image = $filename;
+
+        } else {
+            $banner->image = '';
+
+        }
+        $banner->save();
+        return redirect()->route('banner.index');
+
     }
 
     /**
@@ -56,7 +74,8 @@ class BannerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $banner = Banner::find($id);
+        return view('admin.banner.edit', ['banner' => $banner]);
     }
 
     /**
@@ -66,9 +85,24 @@ class BannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Banner $banner)
     {
-        //
+        $banner->name = $request->name;
+        $banner->image = $request->image;
+
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = md5(time()) . '.' . $extension;
+            $file->move('assets/image/banner/uploads/', $filename);
+            $banner->image = $filename;
+
+        } else {
+            $banner->image = '';
+
+        }
+        $banner->save();
+        return redirect()->route('banner.index');
     }
 
     /**
@@ -79,6 +113,13 @@ class BannerController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $banner = Banner::find($id);
+       $filepath = "assets/image/banner/uploads/";
+        if (!unlink($filepath .$banner->image)) {
+            echo "<script>alert('$filepath - Ocorreu algum problema ao tentar localizar a imagem no servidor.');</script>";
+
+        }
+       $banner->delete($id);
+       return redirect()->route('banner.index');
     }
 }

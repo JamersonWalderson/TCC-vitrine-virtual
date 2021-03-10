@@ -28,7 +28,8 @@
                   </div>
                 </div>
                 <div class="form-group">
-                    <button name="bt-record" type="submit" class="btn btn-success">Cadastrar</button>
+                  <a class="btn btn-danger" href="{{ route('contact.index') }}">Cancelar</a>
+                  <button name="bt-record" type="submit" class="btn btn-success">Cadastrar</button>
                 </div>
             </form>
         </div>

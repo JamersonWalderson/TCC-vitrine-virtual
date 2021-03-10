@@ -4,7 +4,7 @@
 
 <!-------- carousel -------->
 <div class="row">
-    <div class="col h-100">
+    <div class="col">
         <div id="carouselBanner" class="carousel slide banner" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

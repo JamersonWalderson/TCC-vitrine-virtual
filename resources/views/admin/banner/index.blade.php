@@ -15,29 +15,26 @@
             <table id="example" class="table table-striped table-bordered" style="width:100%;">
                 <thead class="thead-light">
                     <tr>
-                        <th>Id</th>
                         <th>Nome</th>
                         <th>Imagem</th>
-                        <th>URL imagem</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($banners as $banner)
                     <tr class="table-">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="/assets/image/product/uploads/ " style="width: 120px; height: 90px;"></td>
+                        <td>{{ $banner->name }}</td>
+                        <td><img src="/assets/image/banner/uploads/{{$banner->image}}" style="width: 120px; height: 90px;"></td>
                         <td>
-                            <form action=" " method="POST">
+                            <form action="{{ route('banner.destroy', $banner->id) }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <a href=""><i class="fas fa-eye text-primary mr-2"></i></a>
-                                <a href=" "><i class="fas fa-edit text-info mr-2"></i></a>
+                                <a href="{{ route('banner.edit', $banner->id) }}"><i class="fas fa-edit text-info mr-2"></i></a>
                                 <button type="submit" class="bt-delete" onclick="return confirm('Deseja realmente deletar este registro?')" style=""><i class="fas fa-trash mr-2 text-danger"></i></button>
                             </form>
                         </td>
                     </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

@@ -18,6 +18,7 @@
                     <input name="name" type="text" class="form-control" id="inputName" placeholder="Ex: Roupas, acessórios, jóias, etc.." required>
                   </div>
                   <div class="form-group">
+                    <a class="btn btn-danger" href="{{ route('category.index') }}">Cancelar</a>
                     <button name="bt-record" type="submit" class="btn btn-success">Cadastrar</button>
                 </div>
                 </div>

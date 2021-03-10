@@ -28,6 +28,7 @@
                 </div>
                 <div class="form-group">
                     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+                    <a class="btn btn-danger" href="{{ route('banner.index') }}">Cancelar</a>
                     <button name="bt-record" type="submit" class="btn btn-success">Cadastrar</button>
                 </div>
               </form>
