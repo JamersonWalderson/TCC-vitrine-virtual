@@ -7,15 +7,11 @@
     <div class="col">
         <div id="carouselBanner" class="carousel slide banner" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://placeimg.com/640/360/any" alt="First slide">
+            @foreach($banners as $key => $banner)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img class="d-block w-100" src="/assets/image/banner/uploads/{{$banner->image}}" alt="First slide">
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-banner" src="http://placeimg.com/640/360/any" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://placeimg.com/640/360/any" alt="Third slide">
-                </div>
+            @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

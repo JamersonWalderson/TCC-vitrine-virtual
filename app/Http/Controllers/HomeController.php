@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Contact;
+use App\Models\Banner;
 
 class HomeController extends Controller
 {
@@ -22,12 +23,12 @@ class HomeController extends Controller
         $categories = Category::All();
         $products = Product::All();
         $contacts = Contact::first();
-
+        $banners = Banner::All();
         if (empty($categories) || empty($products) || empty($contacts)) {
             return redirect()->route('welcome');
         } 
 
-        return view('site.index', ['products' => $products, 'categories' => $categories, 'contacts' => $contacts]);
+        return view('site.index', ['products' => $products, 'categories' => $categories, 'contacts' => $contacts, 'banners' => $banners]);
     }
     
 }
