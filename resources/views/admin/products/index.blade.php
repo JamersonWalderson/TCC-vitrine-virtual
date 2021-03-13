@@ -15,21 +15,21 @@
             <table id="example" class="table table-striped table-bordered" style="width:100%;">
                 <thead class="thead-light">
                     <tr>
+                        <th>Imagem</th>
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Preço</th>
                         <th>Disponibilidade</th>
                         <th>Descrição curta</th>
-                        <!-- ocultado temporariamente
                         <th>Descrição longa</th>
-                        /ocultado temporariamente -->
-                        <th>URL imagem</th>
+                        
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($products as $product)
                     <tr class="table-{{ $product->disponibility == 1 ? 'success' : 'danger' }}">
+                        <td><img src="/assets/image/product/uploads/{{$product->image}}" style="width: 120px; height: 90px;"></td>
                         <td>{{$product->name}}</td>
                         <td>
                             @foreach ($categories as $category)
@@ -43,10 +43,7 @@
                             {{ $product->disponibility == 1 ? 'Disponivel' : 'Indisponivel' }}
                         </td>
                         <td>{{$product->short_description}}</td>
-                        <!-- ocultado temporariamente
                         <td>{{$product->long_description}}</td>
-                        /ocultado temporariamente -->
-                        <td><img src="/assets/image/product/uploads/{{$product->image}}" style="width: 120px; height: 90px;"></td>
                         <td>
                             <form action="{{route('product.destroy', $product->id)}}" method="POST">
                                 @csrf

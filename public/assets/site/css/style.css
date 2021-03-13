@@ -23,17 +23,39 @@ a.custom-card {
 }
 .card-img {
     background-repeat: no-repeat;
-    background-attachment: fixed !important;
-    background-size: cover !important;   
+    background-size: cover;  
     background-position: center !important;
     justify-content: center;
+    height: 250px;
+}
+p.product-name { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    height: 45px;
+}
+p.product-short-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
 }
 
 
 @media screen and (max-width: 600px) {
+    .img-banner {
+        height: 35vh;
+    
+    }
     .card-mobile {
         display: flex;
         flex-direction: row;
 
+    }
+    .card-img {
+        background-size: cover;  
+    }
+    .card-body-mobile {
+    width: 50%;
+        
     }
 }

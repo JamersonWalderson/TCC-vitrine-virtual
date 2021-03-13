@@ -35,15 +35,15 @@
         <div class='col-lg-3 col-md-6 mb-4'>
             <a class="custom-card" href="#" data-toggle="modal" data-target="#productDescription" onClick="getData('{{ $product->id }}', '{{ $product->name }}', '{{ $product->price }}', '{{ $product->short_description }}', '{{ $product->long_description }}', '{{ $product->image }}')">
                 <div class='card card-mobile'>
-                    <div class='card h-100' >
-                        <img class='img-fluid card-img' src="/assets/image/product/uploads/{{$product->image}}" alt='Imagem do produto' style='height: 250px;'>
+                    <div class='card card-img' style='background-image: url({{ asset('assets/image/product/uploads/'.$product->image) }}');>
+                        <!-- imagem -->
                     </div>
-                    <div class='card-body'>
+                    <div class='card-body card-body-mobile'>
                         <h4 class='card-title'>
                             <h5>R$ {{$product->price}} @if($product->disponibility == 0) <span class="badge badge-danger justify-content-end">Indisponível</span> @endif</h5>  
                         </h4>
-                        <p style="text-transform: uppercase;">{{ $product->name }}</p>
-                        <p class='card-text text-secondary'>{{ $product->short_description }}</p>
+                        <p class="product-name">{{ $product->name }}</p>
+                        <p class='card-text text-secondary product-short-description'>{{ $product->short_description }}</p>
                     </div>
                     <div class='card-footer h-100 m-0 p-0'>
                     <!-- card footer-->    

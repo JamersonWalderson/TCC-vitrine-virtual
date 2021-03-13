@@ -44,10 +44,10 @@ class ProductsController extends Controller
         $product = new Product();
         $product->name              = $request->name;
         $product->price             = $request->price;
-        $product->category_id          = $request->category;
+        $product->category_id       = $request->category;
         $product->disponibility     = $request->disponibility;
         $product->short_description = $request->shortDescription;
-        $product->long_description  = $request->longDescription;
+        $product->long_description  = preg_replace('/\s+/', ' ', nl2br($request->longDescription));
 
         if ($request->hasfile('image')) {
             $file = $request->file('image');
@@ -104,7 +104,7 @@ class ProductsController extends Controller
         $product->category_id       = $request->category;
         $product->disponibility     = $request->disponibility;
         $product->short_description = $request->shortDescription;
-        $product->long_description  = $request->longDescription;
+        $product->long_description  = preg_replace('/\s+/', ' ', nl2br($request->longDescription));
 
         if ($request->hasfile('image')) {
             $file = $request->file('image');
