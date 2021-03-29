@@ -104,14 +104,14 @@
 </script>
 
 <script type="text/javascript">
-    function sendMessage(){
+    function sendMessage() {
         var name = $("input[name=inputClientName]").val();
         var email = $("input[name=inputClientEmail]").val();
         var message = $("input[name=inputMessage]").val();
-        var productSelected = document.getElementById('modalProductName').value;
+        var productName = document.getElementById('modalProductName').innerText;
 
         window.open(
-            "https://api.whatsapp.com/send?phone={{$contacts->whatsapp_number}}&text=Contato%20realizado%20atravez%20do%20site.%20Meu%20nome%20%C3%A9%20 " + name + "%20e%20possuo%20interesse%20no%20produto%20" + productSelected + "%20E-mail%3A%20 " + email +"."
+            "https://api.whatsapp.com/send?phone={{$contacts->whatsapp_number}}&text=Contato%20realizado%20atravez%20do%20site.%20Meu%20nome%20%C3%A9%20 " + name + "%20e%20possuo%20interesse%20no%20produto%20" + productName + "%20E-mail%3A%20 " + email +"."
         );
     }
 </script>

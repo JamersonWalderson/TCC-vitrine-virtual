@@ -33,6 +33,7 @@ p.product-name {
     text-overflow: ellipsis;
     text-transform: uppercase;
     height: 45px;
+    white-space: nowrap;
 }
 p.product-short-description {
     overflow: hidden;

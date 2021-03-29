@@ -241,15 +241,20 @@ return [
                 [
                     'text' => 'Produtos',
                     'url'  => 'admin/product',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-store',
                 ],
                 [
                     'text' => 'Categorias',
                     'url'  => 'admin/category',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-store',
                 ],
                 
             ],
+        ],
+        [
+            'text' => 'Banner',
+            'url'  => 'admin/banner',
+            'icon' => 'fas fa-fw fa-images',
         ],
         [
             'text' => 'Usuários',
@@ -257,14 +262,9 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'Banner',
-            'url'  => 'admin/banner',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
             'text' => 'Contato',
             'url'  => 'admin/contact',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-id-card',
         ],
         
     ],
