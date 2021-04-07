@@ -16,7 +16,7 @@ a.custom-card {
     background-repeat: no-repeat;
     background-attachment: fixed !important;
     background-size: cover !important;   
-    background-position: center !important;
+    background-position: center center !important;
     justify-content: center;
     height: 100vh;
 

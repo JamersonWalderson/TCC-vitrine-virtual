@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/home',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -235,21 +235,14 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'    => 'Estoque   ',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Produtos',
-                    'url'  => 'admin/product',
-                    'icon' => 'fas fa-fw fa-store',
-                ],
-                [
-                    'text' => 'Categorias',
-                    'url'  => 'admin/category',
-                    'icon' => 'fas fa-fw fa-store',
-                ],
-                
-            ],
+            'text' => 'Produtos',
+            'url'  => 'admin/product',
+            'icon' => 'fas fa-fw fa-store',
+        ],
+        [
+            'text' => 'Categorias',
+            'url'  => 'admin/category',
+            'icon' => 'fas fa-fw fa-store',
         ],
         [
             'text' => 'Banner',
